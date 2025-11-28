@@ -131,7 +131,7 @@ F1-Score	60%
     └── logger/           # Logging system
 
 ```
-
+---
 ## 🚀 Future Improvements
 
 🔹 Add frontend UI for prediction
@@ -139,3 +139,4 @@ F1-Score	60%
 🔹 Add advanced hyperparameter tuning
 🔹 Plot analytics dashboard for model insights
 🔹 Add ROC-AUC and confusion matrix visualization
+---
