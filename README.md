@@ -116,6 +116,7 @@ F1-Score	60%
 📌 Metrics & model artifacts tracked using MLflow
 
 ## 📁 Project Structure
+
 │── app.py
 │── requirements.txt
 │── README.md
@@ -126,6 +127,7 @@ F1-Score	60%
 │   ├── pipelines/        # Training and prediction pipelines
 │   ├── utils/            # Helper utilities
 │   └── logger/           # Logging system
+
 
 🚀 Future Improvements
 
