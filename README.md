@@ -117,25 +117,18 @@ F1-Score	60%
 
 ## 📁 Project Structure
 
-project-root/
-│
+```text
+.
 ├── app.py
 ├── requirements.txt
 ├── README.md
-│
-├── artifacts/              
-│   └── model.pkl            // Saved ML model and preprocessing objects
-│
-├── mlruns/                  
-│   // MLflow experiment tracking
-│
+├── artifacts/            # Saved ML model and preprocessing objects
+├── mlruns/               # MLflow experiment tracking
 └── src/
-    ├── components/          // Data ingestion, validation, training modules
-    ├── pipelines/           // Training and prediction pipelines
-    ├── utils/               // Helper utilities
-    └── logger/              // Logging system
-
-
+    ├── components/       # Data ingestion, validation, training modules
+    ├── pipelines/        # Training and prediction pipelines
+    ├── utils/            # Helper utilities
+    └── logger/           # Logging system
 
 🚀 Future Improvements
 
