@@ -117,7 +117,7 @@ F1-Score	60%
 
 ## 📁 Project Structure
 
-```text
+'''text
 .
 ├── app.py
 ├── requirements.txt
@@ -130,6 +130,7 @@ F1-Score	60%
     ├── utils/            # Helper utilities
     └── logger/           # Logging system
 
+'''
 🚀 Future Improvements
 
 🔹 Add frontend UI for prediction
