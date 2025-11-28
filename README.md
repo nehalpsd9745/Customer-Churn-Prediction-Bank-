@@ -132,7 +132,7 @@ F1-Score	60%
 
 ```
 
----
+```text
 
 ## 🚀 Future Improvements
 
@@ -141,6 +141,5 @@ F1-Score	60%
 🔹 Add advanced hyperparameter tuning
 🔹 Plot analytics dashboard for model insights
 🔹 Add ROC-AUC and confusion matrix visualization
-
----
+```
 
