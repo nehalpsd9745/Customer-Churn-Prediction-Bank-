@@ -13,7 +13,6 @@ A complete end-to-end **Machine Learning** system designed to predict whether a 
 - [API Usage](#api-usage)
 - [Model Performance](#model-performance)
 - [Project Structure](#project-structure)
-- [Future Improvements](#future-improvements)
 
 ---
 
@@ -63,7 +62,7 @@ Model tracking and versioning are handled through **MLflow**.
 
 # Clone the repository
 git clone <repo-url>
-cd bank-churn-prediction
+cd Customer-Churn-Bank
 
 # Create conda environment
 conda create -n churn python=3.10 -y
@@ -133,13 +132,3 @@ F1-Score	60%
 ```
 
 ```text
-
-## 🚀 Future Improvements
-
-🔹 Add frontend UI for prediction
-🔹 Deploy using Docker & Cloud (AWS/Azure/Render)
-🔹 Add advanced hyperparameter tuning
-🔹 Plot analytics dashboard for model insights
-🔹 Add ROC-AUC and confusion matrix visualization
-```
-
