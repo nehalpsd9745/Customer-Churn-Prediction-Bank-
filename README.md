@@ -42,25 +42,6 @@ The project is structured as a modular pipeline and includes data ingestion, val
 - **SMOTE** (for handling imbalanced data)
 - **Conda** (for environment management)
 
-## Installation
-
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/Debopam-Pritam2014/customer-churn.git
-    cd customer-churn
-    ```
-
-2. Create and activate the Conda environment:
-    ```bash
-    conda create --name churn_prediction python=3.10
-    conda activate churn_prediction
-    ```
-
-3. Install the required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
 ## Running the Application
 
 1. Run the Flask app:
