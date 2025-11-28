@@ -132,6 +132,8 @@ F1-Score	60%
 
 ```
 
+---
+
 ## 🚀 Future Improvements
 
 🔹 Add frontend UI for prediction
@@ -139,17 +141,6 @@ F1-Score	60%
 🔹 Add advanced hyperparameter tuning
 🔹 Plot analytics dashboard for model insights
 🔹 Add ROC-AUC and confusion matrix visualization
-
----
-
-## ✨ Key Features
-
-✔ End-to-end ML pipeline  
-✔ Data validation, transformation, and feature scaling  
-✔ Imbalanced data handling with SMOTE  
-✔ Experiment tracking using MLflow  
-✔ Flask API for real-time predictions  
-✔ Clean, modular folder structure for scalability  
 
 ---
 
