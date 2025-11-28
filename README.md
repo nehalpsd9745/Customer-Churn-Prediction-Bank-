@@ -62,6 +62,7 @@ Model tracking and versioning are handled through **MLflow**.
 
 # Clone the repository
 git clone https://github.com/nehalpsd9745/Customer-Churn-Prediction-Bank-.git
+# Working Directory
 cd Customer-Churn-Bank
 
 # Create conda environment
