@@ -1,74 +1,136 @@
-# Bank Churn Prediction using MLflow and Flask
+# 🚀 Bank Churn Prediction using MLflow & Flask
 
-This project is an end-to-end machine learning system for predicting bank customer churn based on a set of key features such as age, tenure, active membership, and credit score. It uses a pipeline for data ingestion, validation, transformation, model training, and evaluation. The model is deployed via a Flask web application that allows for real-time predictions.
+A complete end-to-end **Machine Learning** system designed to predict whether a bank customer is likely to churn. This project demonstrates full lifecycle ML — including **data processing**, **model training**, **experiment tracking**, and **web deployment**.
 
-## Table of Contents
+---
+
+## 📌 Table of Contents
 - [Project Overview](#project-overview)
-- [Features](#features)
+- [Key Features](#key-features)
 - [Technologies Used](#technologies-used)
-- [Installation](#installation)
+- [Installation & Setup](#installation--setup)
 - [Running the Application](#running-the-application)
-- [Usage](#usage)
-- [Model Evaluation](#model-evaluation)
+- [API Usage](#api-usage)
+- [Model Performance](#model-performance)
+- [Project Structure](#project-structure)
+- [Future Improvements](#future-improvements)
 
-## Project Overview
-This system predicts whether a customer will churn based on various features like:
-- Age
-- Tenure
-- IsActiveMember status
-- Gender
-- Geography
-- CreditScore
-- NumOfProducts
+---
 
-The dataset is highly imbalanced, so **SMOTE** (Synthetic Minority Over-sampling Technique) was applied to handle the imbalance. Multiple machine learning algorithms were tested, and **Gradient Boosting Classifier** was found to be the best-performing model based on accuracy, precision, recall, and F1-score.
+## 🔍 Project Overview
+This system predicts whether a bank customer will **churn** based on features such as:
 
-The project is structured as a modular pipeline and includes data ingestion, validation, feature engineering, model training, and evaluation.
+- Age  
+- Credit Score  
+- Geography & Gender  
+- Tenure  
+- Balance & Estimated Salary  
+- Number of Products  
+- Has Credit Card  
+- Active Member Status  
 
-## Features
-- **Data Ingestion**: Handles reading and loading data for training and testing.
-- **Data Validation**: Ensures data quality and consistency.
-- **Data Transformation**: Preprocessing and feature engineering using techniques like scaling, encoding, etc.
-- **Model Training**: A range of models are tested, and Gradient Boosting Classifier is used for final predictions.
-- **Model Evaluation**: Metrics like accuracy, precision, recall, and F1-score are calculated.
-- **Flask Web App**: Provides two URLs: one for the default route and another for making predictions.
+The dataset is **imbalanced**, and **SMOTE** is used to oversample minority churn cases for better model generalization.
 
-## Technologies Used
-- **Python** (for building the pipeline and machine learning models)
-- **Flask** (for deploying the model as a web app)
-- **MLflow** (for tracking model metrics and artifacts)
-- **Pandas** (for data manipulation)
-- **Scikit-learn** (for model building and evaluation)
-- **SMOTE** (for handling imbalanced data)
-- **Conda** (for environment management)
+Multiple ML models were evaluated — the **Gradient Boosting Classifier** achieved the best performance and is used in deployment.  
+Model tracking and versioning are handled through **MLflow**.
 
-## Running the Application
+---
 
-1. Run the Flask app:
-    ```bash
-    python app.py
-    ```
+## ✨ Key Features
 
-2. The app will start on `http://127.0.0.1:5000/`.
+✔ End-to-end ML pipeline  
+✔ Data validation, transformation, and feature scaling  
+✔ Imbalanced data handling with SMOTE  
+✔ Experiment tracking using MLflow  
+✔ Flask API for real-time predictions  
+✔ Clean, modular folder structure for scalability  
 
-### Flask URLs:
-- **Default route** (`/`): For testing the app.
-- **Prediction route** (`/predict`): Accepts input features for making predictions.
+---
 
-## Usage
+## 🧰 Technologies Used
 
-Once the application is running, you can access the following:
+| Category | Tools |
+|---------|-------|
+| Machine Learning | Scikit-learn, Pandas, NumPy |
+| Deployment | Flask |
+| Experiment Tracking | MLflow |
+| Data Processing | SMOTE, One-Hot Encoding |
+| Environment Management | Conda |
 
-- Default route: `http://127.0.0.1:5000/`
-- Prediction route: `http://127.0.0.1:5000/predict`
+---
 
-You can use the `/predict` route to input features like `age`, `tenure`, `creditscore`, etc., and get back whether the customer is predicted to churn or not.
+## ⚙️ Installation & Setup
 
-## Model Evaluation
-The model was evaluated using various metrics:
-- **Accuracy**  : 86%
-- **Precision** : 66%
-- **Recall**    : 62%
-- **F1-score**  : 60%
+# Clone the repository
+git clone <repo-url>
+cd bank-churn-prediction
 
-The Gradient Boosting Classifier was found to be the best-performing model for predicting churn.
+# Create conda environment
+conda create -n churn python=3.10 -y
+conda activate churn
+
+# Install dependencies
+pip install -r requirements.txt
+
+## ▶️ Running the Application
+python app.py
+
+# The server will start on:
+➡️ http://127.0.0.1:5000/
+
+# 🌐 API Usage
+🏠 Default Route
+GET http://127.0.0.1:5000/
+Returns a welcome message.
+
+# 📈 Prediction Route
+POST http://127.0.0.1:5000/predict
+
+# Example Input (JSON)
+{
+  "CreditScore": 650,
+  "Geography": "France",
+  "Gender": "Male",
+  "Age": 40,
+  "Tenure": 5,
+  "Balance": 100000,
+  "NumOfProducts": 2,
+  "HasCrCard": 1,
+  "IsActiveMember": 1,
+  "EstimatedSalary": 50000
+}
+
+# Example Output
+{
+  "Churn Prediction": "Will Not Churn"
+}
+
+## 📊 Model Performance
+Metric	Score
+Accuracy	86%
+Precision	66%
+Recall	62%
+F1-Score	60%
+
+👉 Best Model: Gradient Boosting Classifier
+📌 Metrics & model artifacts tracked using MLflow
+
+## 📁 Project Structure
+│── app.py
+│── requirements.txt
+│── README.md
+│── artifacts/            # Saved ML model and preprocessing objects
+│── mlruns/               # MLflow experiment tracking
+│── src/
+│   ├── components/       # Data ingestion, validation, training modules
+│   ├── pipelines/        # Training and prediction pipelines
+│   ├── utils/            # Helper utilities
+│   └── logger/           # Logging system
+
+🚀 Future Improvements
+
+🔹 Add frontend UI for prediction
+🔹 Deploy using Docker & Cloud (AWS/Azure/Render)
+🔹 Add advanced hyperparameter tuning
+🔹 Plot analytics dashboard for model insights
+🔹 Add ROC-AUC and confusion matrix visualization
